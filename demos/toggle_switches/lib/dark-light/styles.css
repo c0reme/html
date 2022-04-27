@@ -1,0 +1,68 @@
+body {
+	background-color: var(--mode-light-bg);
+	color: var(--mode-light-text);
+}
+
+/* changes the body's color */
+.dark body {
+	background-color: var(--mode-dark-bg);
+	color: var(--mode-dark-text);
+}
+
+/* the switch label */
+.toggle {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+.toggle > input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* the slider for the base starting colors */
+/* this html starts in light mode, if you want the do the same add checked to the toggle */
+.mode .slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: 34px;
+	background-color: var(--mode-light-bg);
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+}
+
+.mode .slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	border-radius: 50%;
+}
+.mode input:checked + .slider {
+	transition: ease-in-out .3s;
+	box-shadow: none; /* removes the shadow*/
+	background-color: var(--mode-dark-bg);
+}
+
+/* the inputs */
+.mode input + .slider:before {
+	transition: ease-in-out .3s;
+	background-color: var(--mode-light-bg);
+	box-shadow: inset 10px -4px 0 0 var(--mode-dark-bg);
+}
+.mode input:checked + .slider:before {
+	transition: ease-in-out .3s;
+	box-shadow: none;
+	background-color: var(--mode-light-bg);
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}

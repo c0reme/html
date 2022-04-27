@@ -1,0 +1,38 @@
+<!-- for demonstrational purposes only -->
+<html lang="en" class="light">
+	<head>
+		<meta charset="utf-8" />
+		<title>Toggle Switches</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- styles -->
+		<link rel="stylesheet" href="styles.css" />
+		<!-- the dark/light mode css -->
+		<link rel="stylesheet" href="lib/dark-light/styles.css" />
+		<!-- scripts -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<!-- the dark/light mode script -->
+		<script src="lib/dark-light/app.js"></script>
+	</head>
+	<body style="display: flex; flex-direction: column">
+		<div class="grid" style="justify-content: center; padding: 50px">
+			<!-- grid items -->
+			<div class="item">
+				<!-- normal toggle switch -->
+				<label class="toggle normal">
+					<input type="checkbox" />
+					<span class="slider"></span>
+				</label>
+			</div>
+			<div class="item">
+				<!-- dark & light mode toggle switch -->
+				<div class="mode">
+					<label class="toggle">
+						<input type="checkbox" onclick="darkmode()" checked />
+						<span class="slider"></span>
+					</label>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+:root {
+	--mode-dark-text: #fff;
+	--mode-dark-bg: #333;
+	--mode-light-text: #333;
+	--mode-light-bg: #fff;
+}
+
+.item {
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	align-content: center;
+	object-fit: contain;
+	object-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: auto auto auto;
+}
